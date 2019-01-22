@@ -4,7 +4,12 @@ import ("fmt"
 		"net/http")
 
 func index_handler(w http.ResponseWriter, r  *http.Request) {
-	fmt.Fprintf(w, "Whoa, Go is neat!")
+	fmt.Fprintf(w, `<h1>Whoa, Go is neat!</h1>
+	<p>Whoa, Go is cool!</p> 
+	<p>Whoa, Go is clean!</p> 
+	<p>Whoa, Go is clean!</p>
+	<p>You %s even add %s</p>`, "can", "<strong> variabels </strong>")
+	
 }
 
 func about_handler(w http.ResponseWriter, r  *http.Request) {
